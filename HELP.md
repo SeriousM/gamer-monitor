@@ -80,6 +80,9 @@ OBSOLETE --> `gem install heroku`
 
 (actually it would be `git remote add heroku git@heroku.com:stormy-bayou-8492.git`)
 
+- Run Heroku interactive console  
+`heroku run console`
+
 ## Rails Bundler
 
 - Installing Gems defined in Gemfile  
