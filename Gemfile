@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'																			# force ruby to be installed in a specific version
+# force ruby to be installed in a specific version - dont write it in the same line
+ruby '1.9.3'
+
 gem 'rails', '3.2.9'															# rails as framework
 
 gem 'jquery-rails', '2.1.4'												# the jquery library for rails
