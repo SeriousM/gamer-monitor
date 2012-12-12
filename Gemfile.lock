@@ -266,7 +266,7 @@ DEPENDENCIES
   foreman (= 0.60.2)
   fuubar (= 1.1.0)
   guard-rspec (= 2.3.1)
-  guard-shell
+  guard-shell (= 0.5.1)
   guard-spork (= 1.4.0)
   httparty (= 0.9.0)
   jquery-rails (= 2.1.4)

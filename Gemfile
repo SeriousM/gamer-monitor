@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'																			# force ruby to be installed in a specific version
 gem 'rails', '3.2.9'															# rails as framework
 
 gem 'jquery-rails', '2.1.4'												# the jquery library for rails
@@ -30,7 +31,7 @@ group :development do
   gem "quiet_assets", "1.0.1"											# silences the assets pipeline output in development
   gem 'spork', '0.9.2'														# can run a service with preloaded rails environments to speed up rspec test runs
   gem 'guard-rspec', '2.3.1'											# a guard that runs rspec definitions on file change
-  gem 'guard-shell'																# a guard with capability to interact with the shell
+  gem 'guard-shell', '0.5.1'											# a guard with capability to interact with the shell
   gem 'guard-spork', '1.4.0'											# a guard / spork helper to couple this two things together
   gem 'brice', '0.2.5'														# enhance the irb output: http://prometheus.rubyforge.org/brice/
 end
