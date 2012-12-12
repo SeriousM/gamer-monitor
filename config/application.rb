@@ -78,5 +78,9 @@ module QuackingNemesis
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # set the mongoid logging
+    Mongoid.logger.level = Logger::WARN
+    Moped.logger.level = Logger::WARN
   end
 end
