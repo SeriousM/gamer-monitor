@@ -136,3 +136,6 @@ Just use the command line `bundle install --path .bundle` as described [here](ht
 - guard wont get triggered when file changes
 use the switch `--force-polling` like `guard start --force-polling` [https://github.com/guard/guard#-p--force-polling-option](https://github.com/guard/guard#-p--force-polling-option)  
 this is usually needed on action.io platforms.  
+
+- `undefined method '[]' for nil:NilClass`
+make sure that the target machine runs at least `ruby 1.9.3`. info here: [http://mongoid.org/en/mongoid/docs/tips.html](http://mongoid.org/en/mongoid/docs/tips.html)  
