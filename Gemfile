@@ -28,14 +28,16 @@ end
 
 group :development do
   gem "quiet_assets", "1.0.1"											# silences the assets pipeline output in development
-  gem "better_errors", "0.2.0"										# replacement for the default rails error page (much much better!)
-  gem "binding_of_caller", "0.6.8"								# more information for the better_errors page
   gem 'spork', '0.9.2'														# can run a service with preloaded rails environments to speed up rspec test runs
   gem 'guard-rspec', '2.3.1'											# a guard that runs rspec definitions on file change
   gem 'guard-shell'																# a guard with capability to interact with the shell
   gem 'guard-spork', '1.4.0'											# a guard / spork helper to couple this two things together
   gem 'brice', '0.2.5'														# enhance the irb output: http://prometheus.rubyforge.org/brice/
 end
+
+# these gems should be moved to :development after used
+gem "better_errors", "0.2.0"										# replacement for the default rails error page (much much better!)
+gem "binding_of_caller", "0.6.8"								# more information for the better_errors page
 
 # these are the file system watchers for guard. if none of them are used guard will fall back to 'Listen'
 group :development do
