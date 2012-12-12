@@ -132,3 +132,7 @@ Just use the command line `bundle install --path .bundle` as described [here](ht
 
 - No colors in git commands like `git status` or `git diff`
 [http://thomashunter.name/blog/git-colored-output-shortcut-commands-autocompletion-and-bash-prompt/](http://thomashunter.name/blog/git-colored-output-shortcut-commands-autocompletion-and-bash-prompt/)  
+
+- guard wont get triggered when file changes
+use the switch `--force-polling` like `guard start --force-polling` [https://github.com/guard/guard#-p--force-polling-option](https://github.com/guard/guard#-p--force-polling-option)  
+this is usually needed on action.io platforms.  
