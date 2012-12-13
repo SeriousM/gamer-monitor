@@ -30,6 +30,12 @@ class ApplicationController < ActionController::Base
         redirect_to root_url, :alert => 'You need to sign in for access to this page.'
       end
     end
+
+  def authenticate_admin!
+      if current_user.nil? || !current_user.has_role?(:admin)
+        redirect_to root_url, :alert => 'You need to sign in as admin for access to this page.'
+      end
+    end
   
     def user_is_admin?
       !current_user.nil? && current_user.has_role?(:admin)
