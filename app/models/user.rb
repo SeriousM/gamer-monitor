@@ -9,7 +9,7 @@ class User
   attr_accessible :role_ids, :as => :admin
   attr_accessible :provider, :uid, :name, :email
   # run 'rake db:mongoid:create_indexes' to create indexes
-  index({ email: 1 }, { unique: true, background: true })
+  index({ uid: 1, provider: 1 }, { unique: true, background: true })
 
   def self.create_with_omniauth(auth)
     create! do |user|
