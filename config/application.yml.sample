@@ -1,0 +1,33 @@
+#################################################
+#    THIS IS A SAMPLE FILE                      #
+#    RENAME TO application.yml AND MODIFY IT    #
+#    DO NOT ADD IT TO THE REPO, I DARE YOU!     #
+#################################################
+
+# check it first with http://yaml-online-parser.appspot.com/ if valid!
+
+# This file contains the environment variables for rails
+
+#===Example===
+# HELLO: world
+# development:
+#   HELLO: developers
+# production:
+#   HELLO: users
+#In this case, ENV["HELLO"] will produce "developers" in development, "users" in production and "world" otherwise.
+
+# Please have a closer look at https://github.com/laserlemon/figaro for more information.
+
+# NOTE: the MONGODB_URI_* must not end with '/' !
+
+<% branch = Git.open('.').current_branch %>
+
+DEVELOPER_ID: YourName
+BRANCH_NAME: <%= branch %>
+
+development:
+  MONGODB_URI_DEV: mongodb://localhost:27017
+  MONGODB_DB_DEV: qn_dev_<%= branch %>
+test:
+  MONGODB_URI_TEST: mongodb://localhost:27017
+  MONGODB_DB_TEST: qn_test_<%= branch %>

@@ -19,6 +19,10 @@ gem 'action_args', '1.0.3'												# helps to specify arguments on a controll
 gem 'httparty', '0.9.0'														# used to talk to remote api's
 gem 'nokogiri', '1.5.5'														# used to parse remote pages (if they don't have api's)
 
+#gem 'figaro', '0.5.0'                             # helps to manage environment variables
+# use the "ERB in Figaro" fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
+gem 'figaro', git: "git@github.com:sethvargo/figaro.git", ref: "46e999e88664a99386964e3deb5a01e8a6c67ae7"
+
 gem "mongoid", "3.0.14"														# the mongodb orm mapper and driver (moped included)
 gem 'bson_ext', '1.8.0'														# the c-libraries for bson (for faster execution)
 gem 'mongoid_rails_migrations', '1.0.0'						# can be used to migrate mongodb tables if really needed
@@ -59,4 +63,5 @@ group :development, :test do
   gem "rspec-rails", "2.12.0"											# the rspec test-matchers for rails
   gem 'fabrication', "2.5.1"											# a replacement for factory girl because it does not work with mongoid
   gem 'fuubar', '1.1.0'														# a rpsec output formatter
+  gem 'git', '1.2.5'                              # a git gem to interact with git repositories
 end

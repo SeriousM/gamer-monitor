@@ -1,14 +1,14 @@
-# check it first with http://yaml-online-parser.appspot.com/!
+# check it first with http://yaml-online-parser.appspot.com/ if valid!
 development:
   sessions:
     default:
-      uri: mongodb://development:development@ds045157.mongolab.com:45157/quacking_nemesis_development
+      uri: <%= ENV['MONGODB_URI_DEV'] %>/<%= ENV['MONGODB_DB_DEV'] %>
       options:
         safe: true
 test:
   sessions:
     default:
-      uri: mongodb://test:test@ds045157.mongolab.com:45157/quacking_nemesis_test
+      uri: <%= ENV['MONGODB_URI_TEST'] %>/<%= ENV['MONGODB_DB_TEST'] %>
       options:
         safe: true
         consistency: :strong
