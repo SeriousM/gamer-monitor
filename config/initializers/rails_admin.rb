@@ -18,7 +18,8 @@ RailsAdmin.config do |config|
   # config.audit_with :history, 'User'
 
   config.authorize_with do |controller|
-    redirect_to main_app.root_path unless !current_user.nil? && current_user.has_role?(:admin)
+    # note: you must use 'main_app', otherwise the routes wont get found
+    redirect_to main_app.root_path, alert: 'Show me your ID card or go off my lawn!' unless user_is_admin?
   end
 
   # Or with a PaperTrail: (you need to install it first)
