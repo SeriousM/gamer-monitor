@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:sethvargo/figaro.git
+  remote: https://github.com/sethvargo/figaro.git
   revision: 46e999e88664a99386964e3deb5a01e8a6c67ae7
   ref: 46e999e88664a99386964e3deb5a01e8a6c67ae7
   specs:
