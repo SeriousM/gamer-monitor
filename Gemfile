@@ -19,6 +19,8 @@ gem 'action_args', '1.0.3'												# helps to specify arguments on a controll
 gem 'httparty', '0.9.0'														# used to talk to remote api's
 gem 'nokogiri', '1.5.5'														# used to parse remote pages (if they don't have api's)
 
+gem 'rails_admin', '0.3.0'                        # a administration dashboard ready to use
+
 #gem 'figaro', '0.5.0'                             # helps to manage environment variables
 # use the "ERB in Figaro" fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
 gem 'figaro', git: "git@github.com:sethvargo/figaro.git", ref: "46e999e88664a99386964e3deb5a01e8a6c67ae7"
@@ -41,11 +43,9 @@ group :development do
   gem 'guard-rspec', '2.3.1'											# a guard that runs rspec definitions on file change
   gem 'guard-shell', '0.5.1'											# a guard with capability to interact with the shell
   gem 'guard-spork', '1.4.0'											# a guard / spork helper to couple this two things together
+  gem "better_errors", "0.2.0"                    # replacement for the default rails error page (much much better!)
+  gem "binding_of_caller", "0.6.8"                # more information for the better_errors page
 end
-
-# these gems should be moved to :development after used
-gem "better_errors", "0.2.0"										# replacement for the default rails error page (much much better!)
-gem "binding_of_caller", "0.6.8"								# more information for the better_errors page
 
 # these are the file system watchers for guard. if none of them are used guard will fall back to 'Listen'
 group :development do

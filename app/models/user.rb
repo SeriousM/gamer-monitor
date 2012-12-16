@@ -11,7 +11,7 @@ class User
   field :name, type: String
   field :email, type: String
   
-  attr_accessible :role_ids, :as => :admin
+  attr_accessible :role_ids
   attr_accessible :provider, :uid, :name, :email
   
   index({ uid: 1, provider: 1 }, { unique: true, background: true })

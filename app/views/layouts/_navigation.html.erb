@@ -10,9 +10,12 @@
     </li>
   <% end %>
   <% if user_signed_in? %>
+    <li>
+      <%= link_to 'Users', users_path %>
+    </li>
     <% if current_user.has_role? :admin %>
       <li>
-      <%= link_to 'Users', users_path %>
+      <%= link_to 'Admin', rails_admin_path %>
       </li>
     <% end %>
   <% end %>

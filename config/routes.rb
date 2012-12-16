@@ -1,4 +1,6 @@
 QuackingNemesis::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   root :to => "home#index"
   resources :users, :only => [:index, :show, :update ]
   match '/auth/:provider/callback' => 'sessions#create'
