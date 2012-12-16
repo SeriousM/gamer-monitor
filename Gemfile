@@ -23,7 +23,7 @@ gem 'rails_admin', '0.3.0'                        # a administration dashboard r
 
 #gem 'figaro', '0.5.0'                             # helps to manage environment variables
 # use the "ERB in Figaro" fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
-gem 'figaro', git: "git@github.com:sethvargo/figaro.git", ref: "46e999e88664a99386964e3deb5a01e8a6c67ae7"
+gem 'figaro', git: "git@github.com:sethvargo/figaro.git"#, ref: "46e999e88664a99386964e3deb5a01e8a6c67ae7"
 
 gem "mongoid", "3.0.14"														# the mongodb orm mapper and driver (moped included)
 gem 'bson_ext', '1.8.0'														# the c-libraries for bson (for faster execution)
