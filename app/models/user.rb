@@ -2,13 +2,8 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
   
-  has_and_belongs_to_many :games
-  has_many :characters do
-    def for_wow
-      @target.select { |c| c._type == "WowCharacter"}
-    end
-  end
-  
+  has_many :wow_characters
+
   rolify
   
   field :provider, type: String
@@ -35,5 +30,4 @@ class User
       end
     end
   end
-
 end

@@ -1,25 +1,23 @@
 require 'spec_helper'
 
-describe Game do
+describe WowCharacter do
   
-  let(:game) {Fabricate(:game)}
+  let(:wow_character) {Fabricate(:wow_character)}
   
-  subject { game }
+  subject { wow_character }
   
   it { should have_field(:name).of_type(String) }
-  it { should validate_presence_of(:name) }
-  it { should validate_uniqueness_of(:name) }
-  it { should have_index_for(name: 1).with_options(unique: true) }
+  it { should have_field(:server).of_type(String) }
   it { should be_timestamped_document.with(:created) }
   it { should be_timestamped_document.with(:updated) }
   
   describe "when name is not present" do
-    before { game.name = " " }
+    before { wow_character.name = " " }
     it { should_not be_valid }
   end
   
   describe "when saved the first time" do
-    before { game.save! }
+    before { wow_character.save! }
     it { should_not be_new_record }
   end
 end

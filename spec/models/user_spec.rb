@@ -16,24 +16,12 @@ describe User do
     it { should_not be_valid }
   end
   
-  describe "when a game will be added" do
-    let(:game) { Fabricate(:game) }
+  describe "and a wow character will be added" do
+    let (:wow_character) { Fabricate(:wow_character) }
     
+    subject { user.wow_characters }
     it {
-    	expect { user.games << game }.to change(user.games, :count).by(1)
+    	expect{ user.wow_characters << wow_character }.to change(user.wow_characters, :count).by(1)
     }
-    
-    describe "and a game character will be added" do
-      let (:wow_character) { Fabricate(:wow_character) }
-      
-      subject { game.characters }
-      it {
-      	expect{ game.characters << wow_character }.to change(game.characters, :count).by(1)
-      }
-      
-      #its([:games].first.characters.for_wow) {
-      #  expect { game.characters << wow_character }.to change([:games].first.characters.for_wow, :count).by(1)
-      #}
-    end
   end
 end
