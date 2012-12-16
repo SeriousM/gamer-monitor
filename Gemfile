@@ -35,7 +35,6 @@ group :development do
   gem 'guard-rspec', '2.3.1'											# a guard that runs rspec definitions on file change
   gem 'guard-shell', '0.5.1'											# a guard with capability to interact with the shell
   gem 'guard-spork', '1.4.0'											# a guard / spork helper to couple this two things together
-  gem 'brice', '0.2.5'														# enhance the irb output: http://prometheus.rubyforge.org/brice/
 end
 
 # these gems should be moved to :development after used
@@ -58,6 +57,6 @@ end
 
 group :development, :test do
   gem "rspec-rails", "2.12.0"											# the rspec test-matchers for rails
-  gem "factory_girl_rails", "4.1.0"								# a replacement for the test-fixtures
+  gem 'fabrication', "2.5.1"											# a replacement for factory girl because it does not work with mongoid
   gem 'fuubar', '1.1.0'														# a rpsec output formatter
 end
