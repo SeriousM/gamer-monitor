@@ -22,8 +22,7 @@ module QuackingNemesis
     config.generators do |g|
       
       g.test_framework :rspec, fixture: true
-      g.fixture_replacement :factory_girl
-      
+      g.fixture_replacement :fabrication
       
       g.view_specs false
       g.helper_specs false
@@ -36,7 +35,6 @@ module QuackingNemesis
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
     config.autoload_paths += %W(#{config.root}/lib)
-
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
