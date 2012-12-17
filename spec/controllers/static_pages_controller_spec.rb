@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe HomeController do
+describe StaticPagesController do
 
-  describe "GET 'index'" do
+  describe "GET 'home'" do
     it "returns http success" do
-      get 'index'
+      get 'home'
       response.should be_success
     end
   end
