@@ -3,3 +3,9 @@
 
 en:
   hello: "Hello world"
+  mongoid:
+    symbolizes:
+      wow_character:
+        region:
+          us: US Region
+          eu: EU Region

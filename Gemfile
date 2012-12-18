@@ -28,8 +28,10 @@ gem 'figaro', git: "https://github.com/sethvargo/figaro.git", ref: "46e999e88664
 gem "mongoid", "3.0.14"														# the mongodb orm mapper and driver (moped included)
 gem 'bson_ext', '1.8.0'														# the c-libraries for bson (for faster execution)
 gem 'mongoid_rails_migrations', '1.0.0'						# can be used to migrate mongodb tables if really needed
-gem 'symbolize', '4.2.0',                         # Helps to have a kind of enumeration in mongodb
-  :require => "symbolize/mongoid"
+
+# Helps to have a kind of enumeration in mongodb
+# :git <-- as long as pull request https://github.com/nofxx/symbolize/pull/40 is still open or gem was not updated
+gem 'symbolize', git: "https://github.com/SeriousM/symbolize.git", :require => "symbolize/mongoid"
 
 group :assets do
   gem 'sass-rails', '3.2.5'												# the precompiler for sass files
