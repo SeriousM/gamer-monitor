@@ -1,3 +1,5 @@
 -provide(:title, 'Contact')
 %h1 Contact
-%p todo
+%a{ href: raw("mailto:#{obscure_email('bernhard.millauer@gmail.com')}") }
+  Bernhard Millauer
+  =raw "(#{obscure_email('bernhard.millauer@gmail.com')})"
