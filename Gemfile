@@ -15,7 +15,7 @@ gem "rolify", "3.2.0"															# a role management gem that plays well with
 gem "simple_form", "2.0.4"												# a gem to create forms without using erb syntax
 gem 'bcrypt-ruby', '3.0.1'												# To use ActiveModel has_secure_password or to create secure passwords
 gem 'foreman', '0.60.2'														# helps to start up predefined multiple processes at once
-gem 'action_args', '1.0.3'												# helps to specify arguments on a controller action
+gem 'action_args', '1.0.4'												# helps to specify arguments on a controller action
 gem 'httparty', '0.9.0'														# used to talk to remote api's
 gem 'nokogiri', '1.5.5'														# used to parse remote pages (if they don't have api's)
 
@@ -28,7 +28,7 @@ gem 'newrelic_moped'															# contains instrumentations for mongoid 3. mo
 # use the "ERB in Figaro" fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
 gem 'figaro', git: "https://github.com/sethvargo/figaro.git", ref: "46e999e88664a99386964e3deb5a01e8a6c67ae7"
 
-gem "mongoid", "3.0.14"														# the mongodb orm mapper and driver (moped included)
+gem "mongoid", "3.0.15"														# the mongodb orm mapper and driver (moped included)
 gem 'bson_ext', '1.8.0'														# the c-libraries for bson (for faster execution)
 gem 'mongoid_rails_migrations', '1.0.0'						# can be used to migrate mongodb tables if really needed
 
@@ -51,10 +51,10 @@ end
 group :development do
   gem "quiet_assets", "1.0.1"											# silences the assets pipeline output in development
   gem 'spork', '0.9.2'														# can run a service with preloaded rails environments to speed up rspec test runs
-  gem 'guard-rspec', '2.3.1'											# a guard that runs rspec definitions on file change
+  gem 'guard-rspec', '2.3.2'											# a guard that runs rspec definitions on file change
   gem 'guard-shell', '0.5.1'											# a guard with capability to interact with the shell
   gem 'guard-spork', '1.4.0'											# a guard / spork helper to couple this two things together
-  gem "better_errors", "0.2.0"                    # replacement for the default rails error page (much much better!)
+  gem "better_errors", "0.3.2"                    # replacement for the default rails error page (much much better!)
   gem "binding_of_caller", "0.6.8"                # more information for the better_errors page
 end
 
