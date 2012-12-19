@@ -84,5 +84,7 @@ module QuackingNemesis
     # set the mongoid logging
     Mongoid.logger.level = Logger::WARN
     Moped.logger.level = Logger::WARN
+
+    Haml::Template.options[:format] = :html5
   end
 end

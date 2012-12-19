@@ -1,0 +1,5 @@
+%li
+  -serverlink = "http://#{wow_character.region.to_s.downcase}.battle.net/wow/en/character/#{wow_character.server.gsub('\'', "")}/#{wow_character.name}"
+  %a{ href: serverlink }
+    %b= "#{wow_character.name}"
+    = ", #{wow_character.server}, #{wow_character.region.upcase}"

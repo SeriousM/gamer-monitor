@@ -327,6 +327,7 @@ DEPENDENCIES
   guard-rspec (= 2.3.2)
   guard-shell (= 0.5.1)
   guard-spork (= 1.4.0)
+  haml (= 3.1.7)
   httparty (= 0.9.0)
   jquery-rails (= 2.1.4)
   mongoid (= 3.0.15)

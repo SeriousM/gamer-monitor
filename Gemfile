@@ -18,6 +18,7 @@ gem 'foreman', '0.60.2'														# helps to start up predefined multiple pro
 gem 'action_args', '1.0.4'												# helps to specify arguments on a controller action
 gem 'httparty', '0.9.0'														# used to talk to remote api's
 gem 'nokogiri', '1.5.5'														# used to parse remote pages (if they don't have api's)
+gem "haml", '3.1.7'                               # the compiler for haml files
 
 gem 'rails_admin', '0.3.0'                        # a administration dashboard ready to use
 
