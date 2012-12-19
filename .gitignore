@@ -77,3 +77,6 @@ pickle-email-*.html
 
 # Any backup files
 **.bak
+
+# The assets from assets:precompile tests
+/public/assets/*
