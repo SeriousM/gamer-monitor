@@ -9,6 +9,6 @@ class WowCharacter
 
   belongs_to :user
   
-  attr_accessible :name, :server, :region
-  validates_presence_of :name, :server
+  attr_accessible :name, :server, :region, :user_id
+  validates_presence_of :name, :server, :region, :user_id
 end

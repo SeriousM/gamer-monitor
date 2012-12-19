@@ -38,6 +38,11 @@ run `bundle exec rake rails:update` to let rails check your files for compatibil
 - Rollback to the first Database version  
 `rake db:migrate VERSION=0`
 
+## Mongoid / Rails_Admin
+
+- Missing relational assignment possibility
+if a `Dog belongs_to :kid` and an `Kid has_many :dogs` then you should have `attr_accessible :kid_id` on `Dog` and `attr_accessible :dog_ids` on `Kid` to make it editable though Rails_Admin. You can also watch out for warnings thrown by rails_admin in the `rails server` console.
+
 ## Git
 
 - Add content to Git  

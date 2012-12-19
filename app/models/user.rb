@@ -12,7 +12,7 @@ class User
   field :email, type: String
   
   attr_accessible :role_ids
-  attr_accessible :provider, :uid, :name, :email
+  attr_accessible :provider, :uid, :name, :email, :wow_character_ids
   
   index({ uid: 1, provider: 1 }, { unique: true, background: true })
   
