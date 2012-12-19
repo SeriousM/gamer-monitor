@@ -125,6 +125,12 @@ kill the process with `kill -9 <PID>`
 - Environment Variables  
 `printenv` to display them, $NAME to use. $NAME is case sensitive!
 
+## Development Mode
+
+- Foreman
+use `bundle exec foreman start --procfile .\Procfile_dev` to run foreman in the development mode.  
+The default Procfile only contains commands for the production ie. running unicorn.
+
 ## Troubleshooting
 
 - `different prefix: "D:/" and "X:/....."`
