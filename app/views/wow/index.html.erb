@@ -1,0 +1,11 @@
+<h1>These are your wow characters:</h1>
+
+<% if @wow_characters.any? %>
+	<ul class="users">
+  	<%= render :collection => @wow_characters, :partial => 'wow_character' %>
+	</ul>
+<% else %>
+	<div>No Characters created yet!</div>
+<% end %>
+
+<a class="right" href="#">Create one here</a>
