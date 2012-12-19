@@ -46,8 +46,6 @@ end
 group :production do
   platforms :ruby do # linux
     gem 'unicorn', '4.5.0'                        # a web server for the production
-    gem 'libv8', '~> 3.11.8'                      # helps to build therubyracer
-    gem "therubyracer", "0.11.0"                  # a javascript interpreter
   end
 end
 
