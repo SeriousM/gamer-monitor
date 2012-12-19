@@ -21,6 +21,8 @@ gem 'nokogiri', '1.5.5'														# used to parse remote pages (if they don't
 
 gem 'rails_admin', '0.3.0'                        # a administration dashboard ready to use
 
+gem 'newrelic_rpm'                                # helps to instrument the application with "new relic" service
+
 #gem 'figaro', '0.5.0'                             # helps to manage environment variables
 # use the "ERB in Figaro" fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
 gem 'figaro', git: "https://github.com/sethvargo/figaro.git", ref: "46e999e88664a99386964e3deb5a01e8a6c67ae7"
@@ -37,6 +39,12 @@ group :assets do
   gem 'sass-rails', '3.2.5'												# the precompiler for sass files
   gem 'coffee-rails', '3.2.2'											# the precompiler for coffee files
   gem 'uglifier', '1.3.0'													# a compression library for css and js
+end
+
+group :production do
+  platforms :ruby do # linux
+    gem 'unicorn', '4.5.0'                        # a web server for the production
+  end
 end
 
 group :development do
