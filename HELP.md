@@ -88,6 +88,10 @@ OBSOLETE --> `gem install heroku`
 - Run Heroku interactive console  
 `heroku run console`
 
+- Deploy an older / specific version to heroku
+use `git push heroku <SHA Hash>:master` to deploy a new specific version.  
+use `git push heroku <SHA Hash>:master -f` to deploy an older version.  
+
 ## Rails Bundler
 
 - Installing Gems defined in Gemfile  
