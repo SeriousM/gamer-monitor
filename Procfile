@@ -1,2 +1,2 @@
-thin:					bundle exec thin start
-spork_guard:	bundle exec guard start --force-polling --no-interactions
+# FOR PRODUCTION!
+web:          bundle exec unicorn_rails -p $PORT -c ./config/unicorn.rb
