@@ -164,6 +164,9 @@ GEM
     multi_json (1.5.0)
     multi_xml (0.5.1)
     nested_form (0.3.1)
+    newrelic_moped (0.0.4.1)
+      moped
+      newrelic_rpm (~> 3.5.1)
     newrelic_rpm (3.5.4.33)
     nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
@@ -329,6 +332,7 @@ DEPENDENCIES
   mongoid (= 3.0.14)
   mongoid-rspec (= 1.5.5)
   mongoid_rails_migrations (= 1.0.0)
+  newrelic_moped
   newrelic_rpm
   nokogiri (= 1.5.5)
   omniauth (= 1.1.1)

@@ -22,6 +22,7 @@ gem 'nokogiri', '1.5.5'														# used to parse remote pages (if they don't
 gem 'rails_admin', '0.3.0'                        # a administration dashboard ready to use
 
 gem 'newrelic_rpm'                                # helps to instrument the application with "new relic" service
+gem 'newrelic_moped'															# contains instrumentations for mongoid 3. more here: https://github.com/newrelic/rpm_contrib (list of projects)
 
 #gem 'figaro', '0.5.0'                             # helps to manage environment variables
 # use the "ERB in Figaro" fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
