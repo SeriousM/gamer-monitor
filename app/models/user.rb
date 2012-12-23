@@ -3,6 +3,7 @@ class User
   include Mongoid::Timestamps
   
   has_many :wow_characters
+  has_many :wot_characters
 
   rolify
   
@@ -12,7 +13,7 @@ class User
   field :email, type: String
   
   attr_accessible :role_ids
-  attr_accessible :provider, :uid, :name, :email, :wow_character_ids
+  attr_accessible :provider, :uid, :name, :email, :wow_character_ids, :wot_character_ids
   
   index({ uid: 1, provider: 1 }, { unique: true, background: true })
   

@@ -9,3 +9,7 @@ en:
         region:
           us: US Region
           eu: EU Region
+      wot_character:
+        region:
+          world: World Region
+          eu: EU Region

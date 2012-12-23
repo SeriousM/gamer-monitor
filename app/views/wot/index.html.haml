@@ -1,0 +1,9 @@
+%h2 These are your world of tanks characters:
+
+-if @wot_characters.any?
+  %ul
+    =render :collection => @wot_characters, :partial => 'wot_character'
+-else
+  .center No Characters created yet!
+
+%a.right{ href: "#" } Create one here

@@ -15,4 +15,5 @@ QuackingNemesis::Application.routes.draw do
   match '/auth/failure' => 'sessions#failure'
   
   match '/wow' => 'wow#index', as: :wow
+  match '/wot' => 'wot#index', as: :wot
 end

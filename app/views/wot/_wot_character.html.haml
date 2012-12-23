@@ -1,0 +1,8 @@
+%li
+  /http://worldoftanks.eu/community/accounts/505731367-SeriousMasta/
+  -server = wot_character.region == :eu ? "eu" : "com"
+  -serverlink = "http://worldoftanks.#{server}/community/accounts/#{wot_character.account_id}-#{wot_character.name}"
+
+  %a{ href: serverlink }
+    %b= "#{wot_character.name}"
+    = ", #{wot_character.region.upcase}"
