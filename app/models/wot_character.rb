@@ -10,5 +10,5 @@ class WotCharacter
   belongs_to :user
   
   attr_accessible :name, :account_id, :region, :user_id
-  validates_presence_of :name, :id, :region, :user_id
+  validates_presence_of :name, :id, :region, :user_id, :account_id
 end
