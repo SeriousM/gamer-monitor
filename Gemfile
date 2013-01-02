@@ -15,7 +15,7 @@ gem "simple_form", "2.0.4"                        # a gem to create forms withou
 gem 'bcrypt-ruby', '3.0.1'                        # To use ActiveModel has_secure_password or to create secure passwords
 gem 'foreman', '0.60.2'                           # helps to start up predefined multiple processes at once
 gem 'action_args', '1.0.4'                        # helps to specify arguments on a controller action
-gem 'httparty', '0.9.0'                           # used to talk to remote api's
+gem 'httpclient', '2.3.1'                         # used to talk to remote api's
 gem 'nokogiri', '1.5.5'                           # used to parse remote pages (if they don't have api's)
 gem "haml", '3.1.7'                               # the compiler for haml files
 
@@ -70,6 +70,8 @@ group :test do
   gem "database_cleaner", "0.9.1"                 # cleans the database before a test starts
   gem "mongoid-rspec", "1.5.5"                    # the rspec test-matchers for mongoid
   gem "email_spec", "1.4.0"                       # the rspec test-matchers for emails
+  gem "webmock", "< 1.9"                          # used to stub/mock web requests in tests
+  gem "vcr", "2.3.0"                              # can record and reply web requests
 end
 
 group :development, :test do
