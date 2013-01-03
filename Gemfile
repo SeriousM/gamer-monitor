@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # force ruby to be installed in a specific version - dont write it in the same line
 ruby '1.9.3'
 
-gem 'rails', '3.2.9'                              # rails as framework
+gem 'rails', '3.2.10'                             # rails as framework
 
 gem 'jquery-rails', '2.1.4'                       # the jquery library for rails
 gem "bootstrap-sass", "2.2.1.1"                   # bootstrap from twitter - sass
