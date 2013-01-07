@@ -48,6 +48,9 @@ group :production do
 end
 
 group :development do
+  gem 'pry', '0.9.10'                             # alternative for IRb -> http://railscasts.com/episodes/280
+                                                  # call 'pry -r ./config/environment'
+  gem 'pry-doc', '0.4.4'                          # enables to load source from c-libraries too
   gem 'thin', '1.5.0'                             # the used web service
   gem 'quiet_assets', '1.0.1'                     # silences the assets pipeline output in development
   gem 'spork', '0.9.2'                            # can run a service with preloaded rails environments to speed up rspec test runs
