@@ -80,6 +80,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '2.12.0'                     # the rspec test-matchers for rails
+  gem 'shoulda', '3.3.2'                          # a matcher collection and helper for rspec
   gem 'fabrication', '2.5.1'                      # a replacement for factory girl because it does not work with mongoid
   gem 'fuubar', '1.1.0'                           # a rpsec output formatter
   gem 'git', '1.2.5'                              # a git gem to interact with git repositories
