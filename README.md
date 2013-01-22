@@ -1,6 +1,6 @@
 ## Quacking Nemesis
 
-[ ![Codeship Status for SeriousM/quacking-nemesis](https://www.codeship.io/projects/61def420-2c52-0130-3d5e-1231381548ed/status?branch=master)](https://www.codeship.io/projects/698)
+[ ![Codeship Status for SeriousM/quacking-nemesis](https://www.codeship.io/projects/61def420-2c52-0130-3d5e-1231381548ed/status?branch=production)](https://www.codeship.io/projects/698)
 
 ________________________
 
