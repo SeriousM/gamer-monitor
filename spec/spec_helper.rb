@@ -58,10 +58,6 @@ Spork.prefork do
     # in RSpec 3 this will no longer be necessary.
     config.treat_symbols_as_metadata_keys_with_true_values = true
 
-    # add the #use_vcr_cassette matcher
-    # -> https://www.relishapp.com/vcr/vcr/docs/test-frameworks/usage-with-rspec-macro
-    config.extend VCR::RSpec::Macros
-    
     config.before(:suite) do
       DatabaseCleaner.strategy = :truncation
     end
@@ -160,10 +156,6 @@ RSpec.configure do |config|
   # so we can use :vcr rather than :vcr => true;
   # in RSpec 3 this will no longer be necessary.
   config.treat_symbols_as_metadata_keys_with_true_values = true
-
-  # add the #use_vcr_cassette matcher
-  # -> https://www.relishapp.com/vcr/vcr/docs/test-frameworks/usage-with-rspec-macro
-  config.extend VCR::RSpec::Macros
   
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
