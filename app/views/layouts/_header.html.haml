@@ -7,8 +7,6 @@
           %li= link_to "Home", root_path
           %li= link_to "Help", help_path
           -if user_signed_in?
-            -if user_is_admin?
-              %li= link_to "Admin", rails_admin_path
             %li= link_to "Users", users_path
             %li.dropdown#fat-menu
               %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
@@ -17,6 +15,14 @@
               %ul.dropdown-menu
                 %li= link_to "World of Warcraft", wow_path
                 %li= link_to "World of Tanks", wot_path
+            -if user_is_admin?
+              %li.dropdown#fat-menu
+                %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+                  Admin
+                  %b.caret
+                %ul.dropdown-menu
+                  %li= link_to "System", rails_admin_path
+                  %li= link_to "MongoDB", genghis_path if defined? genghis_path
             %li.dropdown#fat-menu
               %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
                 Account

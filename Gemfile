@@ -28,7 +28,7 @@ gem 'newrelic_rpm'                                # helps to instrument the appl
 gem 'figaro', git: 'https://github.com/sethvargo/figaro.git', ref: '46e999e88664a99386964e3deb5a01e8a6c67ae7'
 
 gem 'mongoid', '3.0.15'                           # the mongodb orm mapper and driver (moped included)
-gem 'bson_ext', '1.8.0'                           # the c-libraries for bson (for faster execution)
+gem 'bson_ext'                                    # the c-libraries for bson (for faster execution)
 gem 'mongoid_rails_migrations', '1.0.0'           # can be used to migrate mongodb tables if really needed
 
 # Helps to have a kind of enumeration in mongodb
@@ -48,6 +48,7 @@ group :production do
 end
 
 group :development do
+  gem 'genghisapp', '2.1.6', require: 'genghis'   # a mongodb maintenance application (also for non-localhost)
   gem 'pry', '0.9.10'                             # alternative for IRb -> http://railscasts.com/episodes/280
                                                   # call 'pry -r ./config/environment'
   gem 'pry-doc', '0.4.4'                          # enables to load source from c-libraries too
