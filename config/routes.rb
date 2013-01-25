@@ -10,12 +10,12 @@ QuackingNemesis::Application.routes.draw do
   match '/contact', to: 'static_pages#contact'
   match '/news',    to: 'static_pages#news'
 
-  resources :users, :only => [:index, :show ]
+  resources :users, only: [ :index, :show ]
   match '/auth/:provider/callback' => 'sessions#create'
-  match '/signin' => 'sessions#new', :as => :signin
-  match '/signout' => 'sessions#destroy', :as => :signout
+  match '/signin' => 'sessions#new', as: :signin
+  match '/signout' => 'sessions#destroy', as: :signout
   match '/auth/failure' => 'sessions#failure'
   
-  match '/wow' => 'wow#index', as: :wow
-  match '/wot' => 'wot#index', as: :wot
+  resources :wow, only: [ :index, :new, :create, :destroy ]
+  resources :wot, only: [ :index, :new, :create, :destroy ]
 end

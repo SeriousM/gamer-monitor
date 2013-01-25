@@ -1,5 +1,8 @@
 %li
+  /http://eu.battle.net/wow/en/character/Mugthol/Farodyn
   -serverlink = "http://#{wow_character.region.to_s.downcase}.battle.net/wow/en/character/#{wow_character.server.gsub('\'', "")}/#{wow_character.name}"
+
   %a{ href: serverlink }
-    %b= "#{wow_character.name}"
-    = ", #{wow_character.server}, #{wow_character.region.upcase}"
+    %b= "#{wow_character.name}:"
+    = "#{wow_character.server}, #{wow_character.region.upcase}"
+  =link_to "Delete", wow_path(wow_character), :confirm => "are you sure?", :method => :delete, :class => "btn btn-mini btn-danger"
