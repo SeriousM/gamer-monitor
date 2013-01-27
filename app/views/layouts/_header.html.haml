@@ -23,6 +23,7 @@
                 %ul.dropdown-menu
                   %li= link_to "System", rails_admin_path
                   %li= link_to "MongoDB", genghis_path if defined? genghis_path
+                  %li= link_to "Better_Errors", "#{root_path}__better_errors" if defined? BetterErrors
             %li.dropdown#fat-menu
               %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
                 Account
