@@ -35,6 +35,9 @@ gem 'mongoid_rails_migrations', '1.0.0'           # can be used to migrate mongo
 # :git <-- as long as pull request https://github.com/nofxx/symbolize/pull/40 is still open or gem was not updated
 gem 'symbolize', git: 'https://github.com/SeriousM/symbolize.git', :require => 'symbolize/mongoid'
 
+# Games related gems
+gem 'battlenet', '1.4.0'                          # the battlenet api (wow)
+
 group :assets do
   gem 'sass-rails', '3.2.6'                       # the precompiler for sass files
   gem 'coffee-rails', '3.2.2'                     # the precompiler for coffee files
@@ -52,6 +55,7 @@ group :development do
   gem 'pry', '0.9.11'                             # alternative for IRb -> http://railscasts.com/episodes/280
                                                   # call 'pry -r ./config/environment'
   gem 'pry-doc', '0.4.4'                          # enables to load source from c-libraries too
+  gem 'pry-rails', '0.2.2'                        # pry ready to use -> call 'rails console' to run pry
   gem 'meta_request', '0.2.1'                     # enables the rails panel communication: https://github.com/dejan/rails_panel
   gem 'thin', '1.5.0'                             # the used web service
   gem 'quiet_assets', '1.0.1'                     # silences the assets pipeline output in development

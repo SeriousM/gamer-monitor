@@ -1,8 +1,16 @@
 %li
   /http://eu.battle.net/wow/en/character/Mugthol/Farodyn
-  -serverlink = "http://#{wow_character.region.to_s.downcase}.battle.net/wow/en/character/#{wow_character.server.gsub('\'', "")}/#{wow_character.name}"
+  -serverlink = "http://#{wow_character.region.to_s.downcase}.battle.net/wow/en/character/#{wow_character.server_safe}/#{wow_character.name}/simple"
 
+  -if wow_character.has_details?
+    %img{ src: wow_character.wow_character_sheet.thumbnail }
+  -else
+    =image_tag "unknown.jpg", width: '84px', height: '84px'
   %a{ href: serverlink }
-    %b= "#{wow_character.name}:"
-    = "#{wow_character.server}, #{wow_character.region.upcase}"
-  =link_to "Delete", wow_path(wow_character), :confirm => "are you sure?", :method => :delete, :class => "btn btn-mini btn-danger"
+    %b="#{wow_character.name}:"
+    ="#{wow_character.server}, #{wow_character.region.upcase}"
+    -if wow_character.has_details?
+      ="(Level: #{wow_character.wow_character_sheet.level})"
+  .right
+    =link_to "Delete", wow_path(wow_character), confirm: "are you sure?", method: :delete, class: "btn btn-mini btn-danger"
+    =link_to "Refresh", wow_refresh_path(wow_character.id), class: "btn btn-mini"

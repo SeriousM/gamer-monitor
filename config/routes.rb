@@ -16,6 +16,8 @@ QuackingNemesis::Application.routes.draw do
   match '/signout' => 'sessions#destroy', as: :signout
   match '/auth/failure' => 'sessions#failure'
   
-  resources :wow, only: [ :index, :new, :create, :destroy ]
+  resources :wow, only: [ :index, :new, :create, :destroy ] do
+    get '/refrsh', to: 'wow#refresh', as: :refresh
+  end
   resources :wot, only: [ :index, :new, :create, :destroy ]
 end
