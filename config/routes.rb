@@ -20,5 +20,7 @@ QuackingNemesis::Application.routes.draw do
     get '/refrsh', to: 'wow#refresh', as: :refresh
   end
   resources :wot, only: [ :index, :new, :create, :destroy ]
-  resources :bf3, only: [ :index, :new, :create, :destroy ]
+  resources :bf3, only: [ :index, :new, :create, :destroy ] do
+    get '/refrsh', to: 'bf3#refresh', as: :refresh
+  end
 end

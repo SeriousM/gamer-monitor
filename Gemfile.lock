@@ -53,6 +53,8 @@ GEM
     better_errors (0.3.2)
       coderay (>= 1.0.0)
       erubis (>= 2.7.0)
+    bf3 (0.0.1)
+      httparty
     binding_of_caller (0.6.8)
     bootstrap-sass (2.2.2.0)
       sass (~> 3.2)
@@ -370,6 +372,7 @@ DEPENDENCIES
   battlenet (= 1.4.0)
   bcrypt-ruby (= 3.0.1)
   better_errors (= 0.3.2)
+  bf3 (= 0.0.1)
   binding_of_caller (= 0.6.8)
   bootstrap-sass (= 2.2.2)
   bson_ext

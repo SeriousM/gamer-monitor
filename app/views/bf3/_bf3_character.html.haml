@@ -2,8 +2,15 @@
   /http://bf3stats.com/stats_pc/SeriousM
   -serverlink = "http://bf3stats.com/stats_#{bf3_character.platform}/#{bf3_character.name}"
 
+  -if bf3_character.has_details?
+    %img{ src: bf3_character.bf3_character_sheet.rank_image }
+  -else
+    =image_tag "unknown.jpg", width: '84px', height: '84px'
   %a{ href: serverlink }
     %b= "#{bf3_character.name}:"
     = "#{bf3_character.platform.upcase}"
+    -if bf3_character.has_details?
+      ="(Rank: #{bf3_character.bf3_character_sheet.rank_name})"
   .right
     =link_to "Delete", bf3_path(bf3_character), :confirm => "are you sure?", :method => :delete, :class => "btn btn-mini btn-danger"
+    =link_to "Refresh", bf3_refresh_path(bf3_character.id), class: "btn btn-mini"

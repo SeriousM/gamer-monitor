@@ -29,4 +29,30 @@ class Bf3Controller < ApplicationController
       redirect_to bf3_index_path
     end
   end
+
+  def refresh(bf3_id)
+    bf3_char = Bf3Character.find(bf3_id)
+
+    player = Bf3::Player.new(bf3_char.name, bf3_char.platform.to_s)
+    stats = player.callUp('rank') # get only the ranks for now
+
+    if (!stats)
+      flash[:error] = "Error on loading the statistics for the character."
+      redirect_to bf3_index_path
+      return
+    end
+
+    fact_sheet = Bf3CharacterSheet.new
+    fact_sheet.bf3_character = bf3_char
+    fact_sheet.rank_name = stats['rank']['name']
+    fact_sheet.rank_image = "http://files.bf3stats.com/img/bf3/#{stats['rank']['img_medium']}"
+
+    if fact_sheet.save
+      flash[:notice] = "Character updated successful!"
+    else
+      flash[:error] = "Error on updating the character."
+    end
+
+    redirect_to bf3_index_path
+  end
 end

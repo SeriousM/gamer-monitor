@@ -37,6 +37,7 @@ gem 'symbolize', git: 'https://github.com/SeriousM/symbolize.git', :require => '
 
 # Games related gems
 gem 'battlenet', '1.4.0'                          # the battlenet api (wow)
+gem 'bf3', '0.0.1'                                # the battlefield 3 api (bf3)
 
 group :assets do
   gem 'sass-rails', '3.2.6'                       # the precompiler for sass files
