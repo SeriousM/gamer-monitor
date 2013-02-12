@@ -6,4 +6,5 @@
   %a{ href: serverlink }
     %b= "#{wot_character.name}:"
     = "#{wot_character.region.upcase}"
-  =link_to "Delete", wot_path(wot_character), :confirm => "are you sure?", :method => :delete, :class => "btn btn-mini btn-danger"
+  .right
+    =link_to "Delete", wot_path(wot_character), :confirm => "are you sure?", :method => :delete, :class => "btn btn-mini btn-danger"
