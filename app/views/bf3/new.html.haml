@@ -1,0 +1,4 @@
+=simple_form_for(@bf3_character, url: bf3_index_path, :html => { :class => 'form-horizontal' }) do |f|
+  =f.input :name, :input_html => { :class => "span6" }
+  =f.input :platform, :collection => Bf3Character.platform_enum, :selected => Bf3Character.platform_enum.first, :input_html => { :class => "span6" }
+  =f.button :submit, :class => 'btn-primary'

@@ -1,0 +1,9 @@
+%li
+  /http://bf3stats.com/stats_pc/SeriousM
+  -serverlink = "http://bf3stats.com/stats_#{bf3_character.platform}/#{bf3_character.name}"
+
+  %a{ href: serverlink }
+    %b= "#{bf3_character.name}:"
+    = "#{bf3_character.platform.upcase}"
+  .right
+    =link_to "Delete", bf3_path(bf3_character), :confirm => "are you sure?", :method => :delete, :class => "btn btn-mini btn-danger"

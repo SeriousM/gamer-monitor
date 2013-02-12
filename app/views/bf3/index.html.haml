@@ -1,0 +1,9 @@
+%h2 These are your Battlefield 3 characters:
+
+-if @bf3_characters.any?
+  %ul
+    =render :collection => @bf3_characters, :partial => 'bf3_character'
+-else
+  .center No Characters created yet!
+
+%a.right{ href: new_bf3_path } Create one here

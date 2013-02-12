@@ -13,3 +13,8 @@ en:
         region:
           world: World Region
           eu: EU Region
+      bf3_character:
+        platform:
+          pc: PC
+          xbox360: XBOX 360
+          ps3: PS3
