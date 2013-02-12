@@ -25,7 +25,7 @@ gem 'newrelic_rpm'                                # helps to instrument the appl
 
 #gem 'figaro', '0.5.0'                             # helps to manage environment variables
 # use the 'ERB in Figaro' fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
-gem 'figaro', git: 'https://github.com/sethvargo/figaro.git', ref: '46e999e88664a99386964e3deb5a01e8a6c67ae7'
+gem 'figaro', git: 'https://github.com/SeriousM/figaro.git', ref: '46e999e88664a99386964e3deb5a01e8a6c67ae7'
 
 gem 'mongoid', '3.0.18'                           # the mongodb orm mapper and driver (moped included)
 gem 'bson_ext'                                    # the c-libraries for bson (for faster execution)

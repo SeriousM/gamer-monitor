@@ -1,16 +1,16 @@
 GIT
-  remote: https://github.com/SeriousM/symbolize.git
-  revision: 48f3d7c0d7afd81ed267d0f98b4f787c8e260ce0
-  specs:
-    symbolize (4.2.2)
-
-GIT
-  remote: https://github.com/sethvargo/figaro.git
+  remote: https://github.com/SeriousM/figaro.git
   revision: 46e999e88664a99386964e3deb5a01e8a6c67ae7
   ref: 46e999e88664a99386964e3deb5a01e8a6c67ae7
   specs:
     figaro (0.5.0)
       rails (~> 3.0)
+
+GIT
+  remote: https://github.com/SeriousM/symbolize.git
+  revision: 48f3d7c0d7afd81ed267d0f98b4f787c8e260ce0
+  specs:
+    symbolize (4.2.2)
 
 GEM
   remote: https://rubygems.org/
