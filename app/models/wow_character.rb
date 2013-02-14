@@ -4,6 +4,7 @@ class WowCharacter
   include Mongoid::Symbolize
 
   embeds_one :wow_character_sheet
+  accepts_nested_attributes_for :wow_character_sheet
   
   field :server, type: String
   field :name, type: String
@@ -11,7 +12,7 @@ class WowCharacter
 
   belongs_to :user
   
-  attr_accessible :name, :server, :region, :user_id
+  attr_accessible :name, :server, :region, :user_id, :wow_character_sheet_attributes
   validates_presence_of :name, :server, :region, :user_id
 
   def server_safe
