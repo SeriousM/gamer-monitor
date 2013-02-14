@@ -66,8 +66,8 @@ group :development do
   gem 'guard-rspec', '2.4.0'                      # a guard that runs rspec definitions on file change
   gem 'guard-shell', '0.5.1'                      # a guard with capability to interact with the shell
   gem 'guard-spork', '1.4.1'                      # a guard / spork helper to couple this two things together
-  gem 'better_errors', '0.3.2'                    # replacement for the default rails error page (much much better!)
-  gem 'binding_of_caller', '0.6.8'                # more information for the better_errors page
+  gem 'better_errors', '0.6.0'                    # replacement for the default rails error page (much much better!)
+  gem 'binding_of_caller', '0.6.9'                # more information for the better_errors page
 end
 
 # these are the file system watchers for guard. if none of them are used guard will fall back to 'Listen'
