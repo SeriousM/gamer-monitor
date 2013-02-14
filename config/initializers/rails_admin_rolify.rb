@@ -1,3 +1,16 @@
+# Attention: Rolify has to be configured before rails_admin starts
+# up because the mongoid-usage has to be declared first.
+# => https://github.com/EppO/rolify/pull/70#issuecomment-5455169
+
+Rolify.configure do |config|
+  # By default ORM adapter is ActiveRecord. uncomment to use mongoid
+  config.use_mongoid
+  
+  # Dynamic shortcuts for User class (user.is_admin? like methods). Default is: false
+  # Enable this feature _after_ running rake db:migrate as it relies on the roles table
+  # config.use_dynamic_shortcuts
+end
+
 # RailsAdmin config file. Generated on December 16, 2012 13:01
 # See github.com/sferik/rails_admin for more informations
 
@@ -16,7 +29,7 @@ RailsAdmin.config do |config|
 
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
-  #config.audit_with :histeroid, User
+  #config.audit_with :histeroid, User # => when it works
 
   config.authorize_with do |controller|
     # note: you must use 'main_app', otherwise the routes wont get found

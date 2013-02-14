@@ -21,7 +21,7 @@ gem 'haml', '3.1.7'                               # the compiler for haml files
 
 gem 'rails_admin', '0.4.4'                        # a administration dashboard ready to use
 #gem 'rails_admin_histeroid', '0.0.2'              # the user action protocol for rails admin
-# as long as it does not work.
+# as long as it does not work. requires mongoid 3.1.0 -> symbolize does not work with that version atm!
 
 gem 'newrelic_rpm'                                # helps to instrument the application with 'new relic' service
 
