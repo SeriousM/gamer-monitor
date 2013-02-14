@@ -16,6 +16,7 @@ RailsAdmin.config do |config|
 
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
+  #config.audit_with :histeroid, User
 
   config.authorize_with do |controller|
     # note: you must use 'main_app', otherwise the routes wont get found
