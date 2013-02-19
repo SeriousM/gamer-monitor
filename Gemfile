@@ -29,13 +29,12 @@ gem 'newrelic_rpm'                                # helps to instrument the appl
 # use the 'ERB in Figaro' fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
 gem 'figaro', git: 'https://github.com/SeriousM/figaro.git', ref: '46e999e88664a99386964e3deb5a01e8a6c67ae7'
 
-gem 'mongoid', '3.0.18'                           # the mongodb orm mapper and driver (moped included)
+gem 'mongoid', '3.1.1'                            # the mongodb orm mapper and driver (moped included)
 gem 'bson_ext'                                    # the c-libraries for bson (for faster execution)
 gem 'mongoid_rails_migrations', '1.0.0'           # can be used to migrate mongodb tables if really needed
 
 # Helps to have a kind of enumeration in mongodb
-# :git <-- as long as pull request https://github.com/nofxx/symbolize/pull/40 is still open or gem was not updated
-gem 'symbolize', git: 'https://github.com/SeriousM/symbolize.git', :require => 'symbolize/mongoid'
+gem 'symbolize', '4.3.1', :require => 'symbolize/mongoid'
 
 # Games related gems
 gem 'battlenet', '1.4.0'                          # the battlenet api (wow)
