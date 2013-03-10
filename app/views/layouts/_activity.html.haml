@@ -1,0 +1,6 @@
+.activity
+  -if activity.owner
+    =link_to activity.owner.name, activity.owner
+    =gravatar_for activity.owner, size: 52
+  =timeago a.created_at 
+  =yield

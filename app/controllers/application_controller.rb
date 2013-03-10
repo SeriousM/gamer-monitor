@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     def current_user
       begin
         @current_user ||= User.find(session[:user_id]) if session[:user_id]
-      rescue Exception => e
+      rescue
         nil
       end
     end
@@ -31,12 +31,12 @@ class ApplicationController < ActionController::Base
       end
     end
 
-  def authenticate_admin!
+    def authenticate_admin!
       if current_user.nil? || !current_user.has_role?(:admin)
         redirect_to root_url, :alert => 'You need to sign in as admin for access to this page.'
       end
     end
-  
+
     def user_is_admin?
       !current_user.nil? && current_user.has_role?(:admin)
     end

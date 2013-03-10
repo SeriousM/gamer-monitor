@@ -36,6 +36,8 @@ gem 'mongoid_rails_migrations', '1.0.0'           # can be used to migrate mongo
 # Helps to have a kind of enumeration in mongodb
 gem 'symbolize', '4.3.1', :require => 'symbolize/mongoid'
 
+gem 'public_activity', '1.0.3'                    # an activity feed plugin
+
 # Games related gems
 gem 'battlenet', '1.4.0'                          # the battlenet api (wow)
 gem 'bf3', '0.0.1'                                # the battlefield 3 api (bf3)
@@ -66,7 +68,7 @@ group :development do
   gem 'guard-shell', '0.5.1'                      # a guard with capability to interact with the shell
   gem 'guard-spork', '1.4.1'                      # a guard / spork helper to couple this two things together
   gem 'better_errors', '0.6.0'                    # replacement for the default rails error page (much much better!)
-  gem 'binding_of_caller', '0.6.9'                # more information for the better_errors page
+  gem 'binding_of_caller', '0.7.1'                # more information for the better_errors page
 end
 
 # these are the file system watchers for guard. if none of them are used guard will fall back to 'Listen'

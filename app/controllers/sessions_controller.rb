@@ -14,6 +14,8 @@ class SessionsController < ApplicationController
     if user.email.blank?
       redirect_to root_url(user), :alert => "Something went wrong, sorry!"
     end
+    user.create_activity :signed_in, owner: user
+
     redirect_to root_url, :notice => 'Signed in!'
   rescue
     redirect_to root_url(user), :alert => "Something went wrong, sorry!"

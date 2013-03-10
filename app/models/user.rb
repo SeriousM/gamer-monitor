@@ -1,7 +1,9 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
-  
+
+  include PublicActivity::Common
+
   has_many :wow_characters
   has_many :wot_characters
   has_many :bf3_characters
@@ -22,7 +24,7 @@ class User
   validates_uniqueness_of :uid
 
   def self.create_with_omniauth(auth)
-    create! do |user|
+    new_user = create! do |user|
       user.provider = auth['provider']
       user.uid = auth['uid']
       if auth['info']
@@ -31,5 +33,8 @@ class User
         user.email = auth['info']['email']
       end
     end
+    
+    new_user.create_activity :signed_up, owner: new_user
+    new_user
   end
 end
