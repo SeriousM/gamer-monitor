@@ -18,6 +18,7 @@ gem 'action_args', '1.0.4'                        # helps to specify arguments o
 gem 'httpclient', '2.3.2'                         # used to talk to remote api's
 gem 'nokogiri', '1.5.6'                           # used to parse remote pages (if they don't have api's)
 gem 'haml', '3.1.7'                               # the compiler for haml files
+gem 'percentage', '1.0.0'                         # a gem that is very good at calculating the percentage
 
 gem 'rails_admin', '0.4.4'                        # a administration dashboard ready to use
 #gem 'rails_admin_histeroid', '0.0.2'              # the user action protocol for rails admin
