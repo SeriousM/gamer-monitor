@@ -86,5 +86,8 @@ module QuackingNemesis
     Moped.logger.level = Logger::WARN
 
     Haml::Template.options[:format] = :html5
+
+    # kick the magiconf setup
+    Magiconf.setup!
   end
 end

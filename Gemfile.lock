@@ -1,10 +1,9 @@
 GIT
-  remote: https://github.com/SeriousM/figaro.git
-  revision: 46e999e88664a99386964e3deb5a01e8a6c67ae7
-  ref: 46e999e88664a99386964e3deb5a01e8a6c67ae7
+  remote: https://github.com/SeriousM/magiconf.git
+  revision: 616ad8fd16478dac7849462ab3a4936dbe778ac7
+  ref: 616ad8fd16478dac7849462ab3a4936dbe778ac7
   specs:
-    figaro (0.5.0)
-      rails (~> 3.0)
+    magiconf (0.1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -389,7 +388,6 @@ DEPENDENCIES
   database_cleaner (= 0.9.1)
   email_spec (= 1.4.0)
   fabrication (= 2.5.4)
-  figaro!
   foreman (= 0.61.0)
   fuubar (= 1.1.0)
   genghisapp (= 2.1.6)
@@ -400,6 +398,7 @@ DEPENDENCIES
   haml (= 3.1.7)
   httpclient (= 2.3.2)
   jquery-rails (= 2.2.0)
+  magiconf!
   meta_request (= 0.2.1)
   mongoid (= 3.1.1)
   mongoid-rspec (= 1.5.6)

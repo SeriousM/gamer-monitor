@@ -26,9 +26,9 @@ gem 'rails_admin', '0.4.4'                        # a administration dashboard r
 
 gem 'newrelic_rpm'                                # helps to instrument the application with 'new relic' service
 
-#gem 'figaro', '0.5.0'                             # helps to manage environment variables
-# use the 'ERB in Figaro' fork as long the pull request https://github.com/laserlemon/figaro/pull/19 is still open and not published
-gem 'figaro', git: 'https://github.com/SeriousM/figaro.git', ref: '46e999e88664a99386964e3deb5a01e8a6c67ae7'
+# gem 'magiconf', '0.1.2'                           # helps to manage environment variables, an replacement for figaro
+# as long as this pull request is open use the git repo -> https://github.com/sethvargo/magiconf/pull/3
+gem 'magiconf', git: 'https://github.com/SeriousM/magiconf.git', ref: '616ad8fd16478dac7849462ab3a4936dbe778ac7'
 
 gem 'mongoid', '3.1.1'                            # the mongodb orm mapper and driver (moped included)
 gem 'bson_ext'                                    # the c-libraries for bson (for faster execution)
