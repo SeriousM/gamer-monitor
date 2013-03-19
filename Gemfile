@@ -28,7 +28,7 @@ gem 'newrelic_rpm'                                # helps to instrument the appl
 
 # gem 'magiconf', '0.1.2'                           # helps to manage environment variables, an replacement for figaro
 # as long as this pull request is open use the git repo -> https://github.com/sethvargo/magiconf/pull/3
-gem 'magiconf', git: 'https://github.com/SeriousM/magiconf.git', ref: '616ad8fd16478dac7849462ab3a4936dbe778ac7'
+gem 'magiconf', git: 'https://github.com/SeriousM/magiconf.git', ref: '4dd55962b8285b4da0db527f4d3283e3cc463ea6'
 
 gem 'mongoid', '3.1.1'                            # the mongodb orm mapper and driver (moped included)
 gem 'bson_ext'                                    # the c-libraries for bson (for faster execution)
