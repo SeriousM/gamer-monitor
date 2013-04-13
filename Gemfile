@@ -23,6 +23,7 @@ gem 'percentage', '1.0.0'                         # a gem that is very good at c
 gem 'rails_admin', '0.4.4'                        # a administration dashboard ready to use
 #gem 'rails_admin_histeroid', '0.0.2'              # the user action protocol for rails admin
 # as long as it does not work. requires mongoid 3.1.0 -> symbolize does not work with that version atm!
+gem 'safe_yaml', '0.8.6'                          # needed by rails_admin, low version due https://github.com/sferik/rails_admin/issues/1578
 
 gem 'newrelic_rpm'                                # helps to instrument the application with 'new relic' service
 
