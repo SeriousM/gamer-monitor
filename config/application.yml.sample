@@ -21,9 +21,11 @@
 # NOTE: the MONGODB_URI_* must not end with '/' !
 
 <% require "git" %>
-<% branch = Git.open('.').current_branch %>
+<% git = Git.open('.') %>
+<% branch = git.current_branch %>
+<% dev_name = git.config["user.name"] %>
 
-DEVELOPER_ID: YourName
+DEVELOPER_ID: <%= dev_name %>
 BRANCH_NAME: <%= branch %>
 
 development:
