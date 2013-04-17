@@ -44,6 +44,11 @@ gem 'public_activity', '1.0.3'                    # an activity feed plugin
 gem 'battlenet', '1.4.0'                          # the battlenet api (wow)
 gem 'bf3', '0.0.1'                                # the battlefield 3 api (bf3)
 
+
+platforms :ruby do # linux
+  gem 'therubyracer', '0.11.4'                    # the google v8 javascript engine
+end
+
 group :assets do
   gem 'sass-rails', '3.2.6'                       # the precompiler for sass files
   gem 'coffee-rails', '3.2.2'                     # the precompiler for coffee files
