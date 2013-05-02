@@ -15,9 +15,8 @@ Spork.prefork do
   require 'webmock'
   require 'webmock/rspec'
   require 'vcr'
-  require 'rspec/autorun'
   require 'database_cleaner'
-
+  
   include WebMock::API
   include WebMock::Matchers
 
@@ -115,7 +114,6 @@ require 'email_spec'
 require 'webmock'
 require 'webmock/rspec'
 require 'vcr'
-require 'rspec/autorun'
 require 'database_cleaner'
 
 include WebMock::API
