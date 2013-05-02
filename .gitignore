@@ -80,3 +80,5 @@ pickle-email-*.html
 
 # The assets from assets:precompile tests
 /public/assets/*
+
+/zeus.sock
