@@ -98,6 +98,9 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
       ruby-progressbar (~> 1.0.0)
+    gamer_stats (0.2.0)
+      httparty
+      json
     genghisapp (2.3.4)
       json (~> 1.7.0)
       mongo (~> 1.8.0)
@@ -192,9 +195,6 @@ GEM
       omniauth (~> 1.0)
       rack-openid (~> 1.3.1)
     origin (1.1.0)
-    p_stats (0.1.0)
-      httparty
-      json
     percentage (1.0.0)
     polyglot (0.3.3)
     pry (0.9.12)
@@ -380,6 +380,7 @@ DEPENDENCIES
   fabrication (= 2.6.5)
   foreman (= 0.63.0)
   fuubar (= 1.1.0)
+  gamer_stats (= 0.2.0)
   genghisapp (= 2.3.4)
   git (= 1.2.5)
   guard-rspec (= 2.6.0)
@@ -397,7 +398,6 @@ DEPENDENCIES
   nokogiri (= 1.5.9)
   omniauth (= 1.1.4)
   omniauth-openid
-  p_stats (= 0.1.0)
   percentage (= 1.0.0)
   pry (= 0.9.12)
   pry-doc (= 0.4.5)

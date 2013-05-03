@@ -1,4 +1,4 @@
-require 'bf3'
+require 'gamer_stats'
 
 class Bf3Controller < ApplicationController
   before_filter :authenticate_user!
@@ -35,7 +35,7 @@ class Bf3Controller < ApplicationController
   def refresh(bf3_id)
     bf3_char = Bf3Character.find(bf3_id)
 
-    player = PStats::Bf3::Player.new(bf3_char.name, bf3_char.platform.to_s)
+    player = GamerStats::Bf3::Player.new(bf3_char.name, bf3_char.platform.to_s)
 
     begin
       stats = player.stats('rank') # get only the ranks for now

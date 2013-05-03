@@ -42,7 +42,7 @@ gem 'public_activity', '1.0.3'                    # an activity feed plugin
 
 # Games related gems
 gem 'battlenet', '1.4.0'                          # the battlenet api (wow)
-gem 'p_stats', '0.1.0'                            # the gem to get stats from the p-stats network (bf3)
+gem 'gamer_stats', '0.2.0'                        # the gem to get stats from the p-stats network (bf3)
 
 
 platforms :ruby do # linux
