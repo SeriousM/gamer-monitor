@@ -45,8 +45,6 @@ GEM
     better_errors (0.8.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    bf3 (0.0.1)
-      httparty
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.1.0)
@@ -194,6 +192,9 @@ GEM
       omniauth (~> 1.0)
       rack-openid (~> 1.3.1)
     origin (1.1.0)
+    p_stats (0.1.0)
+      httparty
+      json
     percentage (1.0.0)
     polyglot (0.3.3)
     pry (0.9.12)
@@ -368,7 +369,6 @@ DEPENDENCIES
   battlenet (= 1.4.0)
   bcrypt-ruby (= 3.0.1)
   better_errors (= 0.8.0)
-  bf3 (= 0.0.1)
   binding_of_caller (= 0.7.1)
   bootstrap-sass (= 2.3.1)
   bson_ext (= 1.8.5)
@@ -397,6 +397,7 @@ DEPENDENCIES
   nokogiri (= 1.5.9)
   omniauth (= 1.1.4)
   omniauth-openid
+  p_stats (= 0.1.0)
   percentage (= 1.0.0)
   pry (= 0.9.12)
   pry-doc (= 0.4.5)

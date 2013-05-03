@@ -1,3 +1,5 @@
+require 'bf3'
+
 class Bf3Controller < ApplicationController
   before_filter :authenticate_user!
 
@@ -33,10 +35,11 @@ class Bf3Controller < ApplicationController
   def refresh(bf3_id)
     bf3_char = Bf3Character.find(bf3_id)
 
-    player = Bf3::Player.new(bf3_char.name, bf3_char.platform.to_s)
-    stats = player.callUp('rank') # get only the ranks for now
+    player = PStats::Bf3::Player.new(bf3_char.name, bf3_char.platform.to_s)
 
-    if (!stats)
+    begin
+      stats = player.stats('rank') # get only the ranks for now
+    rescue
       flash[:error] = "Error on loading the statistics for the character."
       redirect_to bf3_index_path
       return
