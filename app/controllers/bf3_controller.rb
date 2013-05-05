@@ -38,7 +38,7 @@ class Bf3Controller < ApplicationController
     player = GamerStats::Bf3::Player.new(bf3_char.name, bf3_char.platform.to_s)
 
     begin
-      stats = player.stats('rank') # get only the ranks for now
+      stats = player.load('clear,imgInfo,rank')['stats'] # get only the ranks for now
     rescue
       flash[:error] = "Error on loading the statistics for the character."
       redirect_to bf3_index_path
