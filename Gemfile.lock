@@ -98,9 +98,10 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
       ruby-progressbar (~> 1.0.0)
-    gamer_stats (0.2.3)
-      httparty
-      json
+    gamer_stats (0.2.4)
+      httparty (~> 0.11.0)
+      json (~> 1.7.7)
+      percentage (~> 1.0.0)
     genghisapp (2.3.4)
       json (~> 1.7.0)
       mongo (~> 1.8.0)
@@ -380,7 +381,7 @@ DEPENDENCIES
   fabrication (= 2.6.5)
   foreman (= 0.63.0)
   fuubar (= 1.1.0)
-  gamer_stats (= 0.2.3)
+  gamer_stats (= 0.2.4)
   genghisapp (= 2.3.4)
   git (= 1.2.5)
   guard-rspec (= 2.6.0)
